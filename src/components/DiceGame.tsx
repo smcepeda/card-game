@@ -58,7 +58,7 @@ export default function DiceGame() {
     });
   }
 
-  function isGameOver(isEmpty: boolean, players: Player[]) {
+  function isGameOver(isEmpty: boolean) {
     if (isEmpty == true) {
       setGameOver(true);
     } else {
@@ -69,7 +69,7 @@ export default function DiceGame() {
   useEffect(() => {
     pickRandomColor();
     checkScore(players, dice);
-    isGameOver(isEmpty, players);
+    isGameOver(isEmpty);
   }, [rounds]);
 
   return (
